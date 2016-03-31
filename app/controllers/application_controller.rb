@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   def current_user
   	user_id = sessuin[:user_id]
   	if user_id
-  		User.find_by(id: user_id
+  		User.find_by(id: user_id)
   	end
-  end)
+  end
 end
