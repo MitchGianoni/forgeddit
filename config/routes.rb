@@ -6,14 +6,23 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 root to: "index#index"
 
-
-
 get "register/new", to: "registrations#new", as: "new_register"
 post "register", to: "registrations#create", as: "register"
 
 get "login", to: "logins#new", as: "login"
 post "login", to: "logins#create"
 delete "login", to: "logins#destroy"
+
+get "index/posts/new" to: "posts#new", as: "posts_new"
+post "posts", to: "posts#create"
+
+get "index/posts/:id/edit", to: "posts#edit", as: "edit_post"
+put "index/posts/:id", to: "posts#update"
+put "index/posts/:id", to: "posts#show"
+delete "index/posts/:id", to: "posts#destroy"
+
+post "index/posts/:id/comments", to: "comments#create", as: "post_comments"
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
