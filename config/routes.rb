@@ -23,6 +23,7 @@ delete "posts.:id", to: "posts#destroy"
 
 post "posts/:id/comments", to: "comments#create", as: "post_comments"
 get "posts/:id/comments/", to: "comments#new", as: "comments_new"
+delete "posts/:id/comments", to: "comments#destroy"
 
 # get "demo/hello" => "your-controller#your-action"
 
