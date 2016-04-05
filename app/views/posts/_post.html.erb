@@ -1,6 +1,5 @@
- <h2 class="post-title"><%= link_to_unless_current(post.title, post_path(post)) %></h2>
- <h4 class="post-date">Written <%= time_ago_in_words(post.created_at) %> ago</h4>
- <h4 class="post-tags">Tagged as <%= post.tag_names %></h4>
+ <h3 class="comment-label"><%= link_to_unless_current(post.label, posts_show_path(post)) %></h2>
+ <h4 class="post-date">Written by <%= post.user.username %> <%= time_ago_in_words(post.created_at) %> ago</h4>
  <div class="post-body">
-     <%= simple_format(post.content) %>
+     <%= simple_format(post.url) %>
  </div>

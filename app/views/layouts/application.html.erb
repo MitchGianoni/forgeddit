@@ -11,7 +11,7 @@
 	<nav>
 		<% if current_user %>
 			<h5>LOGGED IN AS: <%= current_user.username %></h5>
-			<%= link_to("Logout", login_path, method: :delete) %>
+			<%= link_to("Logout", login_path, method: :delete, :data => { :confirm => "Logout #{current_user.username}??"}) %>
 		<% else %>
 			<%= link_to("Signup", new_register_path) %>
 			<%= link_to("Login", login_path) %>
@@ -21,6 +21,9 @@
 	<% if flash[:notice] %>
 		<h6 class="alert"><%= flash[:notice] %></h6>
 	<% end %>
+
+</br>
+</br>
 
 <%= yield %>
 

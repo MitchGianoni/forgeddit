@@ -1,32 +1,13 @@
-<!-- <form class="new-post" action="/posts" method="post"> -->
-<!-- <div class="post-field"> -->
-<!-- <label>Title: </label> <br/> -->
-<!-- <input type="text" name="title"> -->
-<!-- </div>  -->
-
-<!-- <div class="post-field"> -->
-<!-- <label>Content: </label> <br/> -->
-<!-- <input type="textarea" name="content"> -->
-<!-- </div> -->
-
-<!-- <button type="submit">Create Post!</button> -->
-<!-- </form> -->
-
 <%=  form_tag(posts_path) do %>
     <div class="post-field">
-        <%= label_tag("Title: ") %> <br/>
-        <%= text_field_tag("title", @post.title) %>
+        <%= label_tag("Label: ") %> <br/>
+        <%= text_field_tag("label", @post.label) %>
     </div>
 
     <div class="post-field">
-        <%= label_tag("Tags: ") %> <br/>
-        <%= text_field_tag("tags", @post.tag_names) %>
+        <%= label_tag("Url: ") %> <br/>
+        <%= text_field_tag("url", @post.url) %>
     </div>
 
-    <div class="post-field">
-        <%= label_tag("Content: ") %> <br/>
-        <%= text_area_tag("content", @post.content) %>
-    </div>
-
-    <%= button_tag("Create Post!") %>
+    <%= button_tag("Add Link!") %>
 <% end %>
