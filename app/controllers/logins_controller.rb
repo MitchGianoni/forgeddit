@@ -8,7 +8,7 @@ class LoginsController < ApplicationController
 							password: params["password"])
 		if @user
 			session[:user_id] = @user.id
-			flash[:notice] = "Logged in!"
+			flash[:notice] = "#{@user.username} now logged in!"
 			redirect_to :root
 		else
 			flash[:notice] = "Bad Credentials."
