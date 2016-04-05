@@ -22,6 +22,9 @@ get "posts/:id", to: "posts#show", as: "posts_show"
 delete "posts.:id", to: "posts#destroy"
 
 post "posts/:id/comments", to: "comments#create", as: "post_comments"
+get "posts/:id/comments/new", to: "comments#new", as: "comments_new"
+
+# get "demo/hello" => "your-controller#your-action"
 
 
   # Example of regular route:
