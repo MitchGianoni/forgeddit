@@ -11,7 +11,7 @@ class LoginsController < ApplicationController
 			flash[:notice] = "Logged in!"
 			redirect_to :root
 		else
-			flash[:notice] = "User does not exist."
+			flash[:notice] = "Bad Credentials."
 			render :new
 		end
 	end
