@@ -1,5 +1,5 @@
- <h3 class="comment-label"><%= link_to_unless_current(post.label, posts_show_path(post)) %></h2>
- <h4 class="post-date">Written by <%= post.user.username %> <%= time_ago_in_words(post.created_at) %> ago</h4>
- <div class="post-body">
-     <%= simple_format(post.url) %>
+ <div> 
+ <h3 class="comment-label"><%= link_to post.label, "http://#{post.url}", :target =>'_blank'%></h3>
+ <h6 class="post-date">Written by <%= post.user.username %> <%= time_ago_in_words(post.created_at) %> ago</h6>
+ <a class="comment-body"><%= link_to_unless_current(" View Comments", posts_show_path(post)) %></>
  </div>
