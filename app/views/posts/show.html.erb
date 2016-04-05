@@ -1,14 +1,7 @@
 <%= render partial: "post", locals: { post: @post } %>
 
-<nav>
-    <br/>
-    <%= link_to("Homepage", :root) %>
-    <br/>
-</nav>
-
 <div class="comments-form">
-    <h3>Add a Comment</h3>
-    <%= form_tag(post_comments_path(@post.id)) do %>
+    <%= form_tag(comments_new_path(@post.id)) do %>
       <div class="comment-field">
           <%= label_tag("Comment") %>
           <%= text_area_tag("body", nil, cols: 40, rows: 8) %>
@@ -18,11 +11,17 @@
     <% end %>
 </div>
 
-<h3>Insightful Comments</h3>
+<nav>
+    <br/>
+    <%= link_to("Back", :root) %>
+    <br/>
+</nav>
+
+<h3>List of Comments</h3>
 <div class="comments">
   <% @post.comments.each do |comment| %>
       <div class="post-comment">
-          <%= simple_format(comment.body) %>
+          <%= simple_format(comment.text) %>
       </div>
   <% end %>
 </div>
