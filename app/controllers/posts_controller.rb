@@ -31,6 +31,13 @@ class PostsController < ApplicationController
 		render :edit, locals: { post: post }
 	end
 
+	def update
+    	post = Post.find(params["id"])
+    	post.update(label: params["label"],
+                url: params["url"])
+    	redirect_to root_path
+ 	 end
+
 	def destroy
 		post = Post.find(params["id"])
 		if current_user.id == post.user_id

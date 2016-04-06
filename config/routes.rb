@@ -16,8 +16,8 @@ delete "login", to: "logins#destroy"
 get "posts/new", to: "posts#new", as: "posts_new"
 post "posts", to: "posts#create"
 
-get "posts/:id/edit", to: "posts#edit", as: "edit_post"
-put "posts/:id", to: "posts#update"
+get "posts/:id/edit", to: "posts#edit", as: "posts_edit"
+put "posts/:id/edit", to: "posts#update"
 get "posts/:id", to: "posts#show", as: "posts_show"
 delete "posts.:id", to: "posts#destroy"
 

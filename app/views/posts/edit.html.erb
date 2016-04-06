@@ -1,17 +1,12 @@
-<%=  form_tag(post_path(post), method: :put) do %>
+<%=  form_tag(posts_edit_path(post), method: :put) do %>
     <div class="post-field">
-        <%= label_tag("Title: ") %> <br/>
-        <%= text_field_tag("title", post.title) %>
+        <%= label_tag("Label: ") %> <br/>
+        <%= text_field_tag("label", post.label) %>
     </div>
 
     <div class="post-field">
-        <%= label_tag("Tags: ") %> <br/>
-        <%= text_field_tag("tags", post.tag_names) %>
-    </div>
-
-    <div class="post-field">
-        <%= label_tag("Content: ") %> <br/>
-        <%= text_area_tag("content", post.content) %>
+        <%= label_tag("Url: ") %> <br/>
+        <%= text_field_tag("url", post.url) %>
     </div>
 
     <%= button_tag("Update Post!") %>
