@@ -5,8 +5,4 @@ class CommentTest < ActiveSupport::TestCase
   	comment = Comment.new
   	assert_not comment.save
   end
-
-  validates :user_id, presence: true
-  validates :post_id, presence: true
-  validates :text, presence: true
 end

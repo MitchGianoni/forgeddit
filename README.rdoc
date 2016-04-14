@@ -1,6 +1,6 @@
 == README
 
-[![Build Status](https://travis-ci.org/MitchGianoni/forgeddit.svg?branch=master)](http://travis-ci.org/MitchGianoni/forgeddit)
+[![Build Status](https://travis-ci.org/MitchGianoni/forgeddit.svg?branch=master)](https://travis-ci.org/MitchGianoni/forgeddit)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
